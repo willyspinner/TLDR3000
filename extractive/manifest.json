@@ -1,0 +1,23 @@
+{
+    "name": "TLDR3000",
+    "version": "1.0",
+    "description": "transform text-heavy web pages to summaries using Machine Learning (Extractive summarization)",
+    "manifest_version": 2,
+    "permissions": [
+      "storage",
+      "contextMenus"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "page_action": {
+      "default_popup": "popup.html"
+    },
+   "content_scripts": [
+     {
+       "matches": ["<all_urls>"],
+       "css": [],
+       "js": ["contentScript.js"]
+     }
+   ]
+}
